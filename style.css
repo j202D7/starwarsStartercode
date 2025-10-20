@@ -14,8 +14,12 @@ img {
 
 
 /* phone */
-body {
+@media and screen and (min-width : 600px) {
+  body{
   background-color: #e4e7ec;
+  flex-direction: column;
+  justify-content: end;
+  }
 }
 
 
@@ -29,7 +33,7 @@ h1 {
 /* computer */
 @media screen and (min-width: 600px) {
 body{
-  
+
 }
 
 
