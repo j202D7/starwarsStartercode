@@ -1,41 +1,78 @@
 @import url("https://fonts.googleapis.com/css?family=Lato|Poller+One&display=swap");
 
-img {
-  align-self: center;
-}
-
-
-
-
 @font-face {
   font-family: "SF Distant Galaxy";
   src: url("SFDistantGalaxy.ttf") format("truetype");
 }
 
-
-/* phone */
-@media and screen and (min-width : 600px) {
-  body{
-  background-color: #e4e7ec;
+/* Base (mobile-first) */
+body {
+  background-color: #020b21; /* dark space blue */
+  color: #ffd700; /* yellow Star Wars style */
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  display: flex;
   flex-direction: column;
-  justify-content: end;
-  }
+  align-items: center;
+  text-align: center;
 }
-
-
 
 h1 {
   font-family: "SF Distant Galaxy";
+  color: #ffd700;
+  margin: 20px 0;
 }
 
+/* Navigation */
+nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 
+nav a {
+  color: #ffd700;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-/* computer */
+nav a:hover {
+  color: white;
+}
+
+/* Image rows - stacked by default for mobile */
+.toprow, .middlerow, .bottomrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+img {
+  width: 100px;
+  height: auto;
+  margin: 2px;
+}
+
+/* ---------- DESKTOP VIEW ---------- */
 @media screen and (min-width: 600px) {
-body{
+  body {
+    background-color: #020b21;
+    flex-direction: column;
+    align-items: center;
+  }
 
+  nav {
+    flex-direction: row;
+    justify-content: center;
+    gap: 80px;
+  }
+
+  .toprow, .middlerow, .bottomrow {
+    flex-direction: row;
+  }
+
+  img {
+    width: 150px;
+    margin: 4px;
+  }
 }
-
-
-}
-
